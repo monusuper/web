@@ -11,7 +11,7 @@ app.mount("/static", StaticFiles(directory="static"), name="static")
 # Serve HTML Pages
 @app.get("/", response_class=HTMLResponse)
 async def home():
-    html_path = Path("templates/index.html")
+    html_path = Path("templates/home.html")
     return HTMLResponse(content=html_path.read_text())
 
 @app.get("/commands", response_class=HTMLResponse)
