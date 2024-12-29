@@ -5,10 +5,10 @@ from pathlib import Path
 
 app = FastAPI()
 
-# Mount Static Files
+# Serve Static Files
 app.mount("/static", StaticFiles(directory="static"), name="static")
 
-# Serve HTML Pages
+# Routes for HTML pages
 @app.get("/", response_class=HTMLResponse)
 async def home():
     html_path = Path("templates/home.html")
