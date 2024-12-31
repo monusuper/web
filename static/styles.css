@@ -1,0 +1,133 @@
+/* General Styles */
+/* General Styles */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    color: white;
+    background: url("https://media.discordapp.net/attachments/867299250471436309/1322826632100188232/Leonardo_Phoenix_10_A_futuristic_and_mystical_website_backgrou_2.png?ex=677249ce&is=6770f84e&hm=eadb52d3389ba83514da02b24c76692960e842de1b01cd588bbd7c7db370d92d&=&width=550&height=307") 
+                no-repeat center center fixed;
+    background-size: cover;
+    backdrop-filter: blur(4px);
+    overflow-x: hidden;
+}
+
+
+/* Header Styles */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: rgba(0, 0, 0, 0.7);
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%; /* Makes the logo round */
+    border: 2px solid white; /* Adds a subtle border around the logo */
+    margin-right: 10px;
+}
+
+.bot-name {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #ffffff;
+}
+
+.nav {
+    display: flex;
+    gap: 20px;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.nav-link:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    color: #0084ff; /* Adds a techy yellow highlight */
+}
+
+.login-btn {
+    padding: 10px 20px;
+    font-size: 16px;
+    color: white;
+    background: linear-gradient(45deg, #6c63ff, #a29bfe);
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.login-btn:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 15px #6c63ff, 0 0 30px #6c63ff;
+}
+
+/* Main Content Styles */
+.main-content {
+    padding: 20px;
+    text-align: center;
+}
+
+.main-title {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+.main-text {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+/* Commands Page */
+.command-box {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    margin: 20px auto;
+    max-width: 1200px;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.6);
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+.command-category {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #0084ff;
+    margin-bottom: 10px;
+}
+
+.command-item {
+    font-size: 1.1rem;
+    padding: 5px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+    margin-bottom: 5px;
+}
+
+/* Footer (Optional) */
+footer {
+    text-align: center;
+    padding: 10px;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.8);
+    font-size: 0.9rem;
+    margin-top: 20px;
+}
