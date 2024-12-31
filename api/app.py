@@ -87,4 +87,13 @@ async def profile(user: dict = Depends(get_current_user)):
 @app.get("/dashboard")
 async def dashboard(user: dict = Depends(get_current_user)):
     guilds = await discord.get("users/@me/guilds", token=user["token"])
-    return templates.TemplateResponse("dashboard.html", {"request": user, "guilds": guilds.json()})
+    for guild in guilds.json():
+        guild["icon_url"] = (
+            f"https://cdn.discordapp.com/icons/{guild['id']}/{guild['icon']}.png"
+            if guild["icon"]
+            else "https://via.placeholder.com/128"
+        )
+    return templates.TemplateResponse(
+        "dashboard.html", {"request": user, "guilds": guilds.json()}
+    )
+
