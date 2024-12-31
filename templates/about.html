@@ -1,3 +1,17 @@
+{% if user %}
+<div class="profile">
+    <img src="{{ user.avatar_url }}" alt="Avatar" class="avatar">
+    <div class="dropdown">
+        <ul>
+            <li><a href="/profile">Profile</a></li>
+            <li><a href="/dashboard">Dashboard</a></li>
+            <li class="logout"><a href="/logout">Logout</a></li>
+        </ul>
+    </div>
+</div>
+{% else %}
+<a href="/login" class="login-btn">Login</a>
+{% endif %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -20,7 +34,6 @@
             <a href="/help" class="nav-link">Help</a>
             <a href="/about" class="nav-link">About</a>
         </nav>
-        <button class="login-btn">Login</button>
     </header>
     <main class="main-content">
         <h2 class="main-title">About Aetherion</h2>
