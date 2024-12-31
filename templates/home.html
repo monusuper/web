@@ -4,14 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home - Aetherion</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
-    <link rel="icon" type="image/png" href="{{ url_for('static', filename='logo.png') }}">
+    <link rel="stylesheet" href="/static/styles.css">
+    <link rel="icon" href="/static/logo.png" type="image/png">
 </head>
-<body>
+<body> 
     <div class="background"></div>
+    <body style="background-image: url('/static/background.png'); background-size: cover; background-attachment: fixed;">
     <header class="header">
         <div class="logo-container">
-            <img src="{{ url_for('static', filename='logo.png') }}" alt="Aetherion Logo" class="logo">
+            <img src="/static/logo.png" alt="Aetherion Logo" class="logo">
             <h1 class="bot-name">Aetherion</h1>
         </div>
         <nav class="nav">
