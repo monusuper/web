@@ -1,30 +1,26 @@
-from fastapi import FastAPI
 from fastapi.staticfiles import StaticFiles
 from fastapi.responses import HTMLResponse
 from pathlib import Path
+from fastapi import FastAPI
 
 app = FastAPI()
 
-# Serve Static Files
+# Mount the static files directory
 app.mount("/static", StaticFiles(directory="static"), name="static")
 
-# Routes for HTML pages
+# Serve HTML pages
 @app.get("/", response_class=HTMLResponse)
 async def home():
-    html_path = Path("templates/home.html")
-    return HTMLResponse(content=html_path.read_text())
+    return Path("templates/home.html").read_text()
 
 @app.get("/commands", response_class=HTMLResponse)
 async def commands():
-    html_path = Path("templates/commands.html")
-    return HTMLResponse(content=html_path.read_text())
+    return Path("templates/commands.html").read_text()
 
 @app.get("/help", response_class=HTMLResponse)
 async def help_page():
-    html_path = Path("templates/help.html")
-    return HTMLResponse(content=html_path.read_text())
+    return Path("templates/help.html").read_text()
 
 @app.get("/about", response_class=HTMLResponse)
 async def about_page():
-    html_path = Path("templates/about.html")
-    return HTMLResponse(content=html_path.read_text())
+    return Path("templates/about.html").read_text()
