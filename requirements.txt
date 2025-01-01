@@ -6,3 +6,4 @@ aiohttp
 authlib
 python-dotenv
 itsdangerous
+httpx
