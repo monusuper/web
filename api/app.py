@@ -3,11 +3,13 @@ from fastapi.staticfiles import StaticFiles
 from fastapi.responses import HTMLResponse
 from pathlib import Path
 from starlette.middleware.sessions import SessionMiddleware
-
+from dotenv import load_dotenv
+import os
+from authlib.integrations.starlette_client import OAuth
 
 app = FastAPI()
 
-import os
+
 
 # Get the directory path dynamically
 static_dir = os.path.join(os.path.dirname(__file__), "../static")
@@ -34,13 +36,10 @@ async def about_page():
     html_path = Path("templates/about.html")
     return HTMLResponse(content=html_path.read_text())
 
-from dotenv import load_dotenv
-import os
-from authlib.integrations.starlette_client import OAuth
+
 
 # Initialize OAuth
 oauth = OAuth()
-oauth.init_app(app)  # Replace `app` with your FastAPI app instance if necessary
 
 
 load_dotenv()
