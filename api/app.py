@@ -2,6 +2,8 @@ from fastapi import FastAPI
 from fastapi.staticfiles import StaticFiles
 from fastapi.responses import HTMLResponse
 from pathlib import Path
+from starlette.middleware.sessions import SessionMiddleware
+
 
 app = FastAPI()
 
