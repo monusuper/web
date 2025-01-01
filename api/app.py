@@ -36,6 +36,12 @@ async def about_page():
 
 from dotenv import load_dotenv
 import os
+from authlib.integrations.starlette_client import OAuth
+
+# Initialize OAuth
+oauth = OAuth()
+oauth.init_app(app)  # Replace `app` with your FastAPI app instance if necessary
+
 
 load_dotenv()
 
